@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
             <a href="../views/add_question.php" class="btn btn-primary mt-3">Ajouter une autre question</a>
-            <a href="../views/list.php" class="btn btn-secondary mt-3">Voir toutes les questions</a>
+            <a href="../index.php" class="btn btn-secondary mt-3">Voir toutes les questions</a>
         <?php elseif (isset($error_message)): ?>
 
             <div class="alert alert-danger p-4 rounded shadow">

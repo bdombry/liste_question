@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/config/database.php';
 
 $order = isset($_GET['order']) && $_GET['order'] === 'asc' ? 'ASC' : 'DESC';
 
@@ -25,7 +25,7 @@ $next_order = ($order === 'ASC') ? 'desc' : 'asc';
 <body class="container mt-5">
     <h2 class="mb-4">Liste des questions</h2>
 
-    <a href="list.php?order=<?= $next_order ?>" class="btn btn-secondary mb-3">
+    <a href="index.php?order=<?= $next_order ?>" class="btn btn-secondary mb-3">
         Trier par taux de réussite (<?= $order === 'ASC' ? 'Croissant' : 'Décroissant' ?>)
     </a>
 
@@ -48,8 +48,8 @@ $next_order = ($order === 'ASC') ? 'desc' : 'asc';
                         <td><?= $question['taux_reussite'] ?>%</td>
                         <td><?= $question['tentatives']  ?></td>
                         <td>
-                            <a href="answer.php?id=<?= $question['id'] ?>" class="btn btn-success btn-sm">Répondre</a>
-                            <a href="../controllers/delete_question.php?id=<?= $question['id'] ?>" class="btn btn-danger btn-sm">Supprimer</a>
+                            <a href="views/answer.php?id=<?= $question['id'] ?>" class="btn btn-success btn-sm">Répondre</a>
+                            <a href="controllers/delete_question.php?id=<?= $question['id'] ?>" class="btn btn-danger btn-sm">Supprimer</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -59,6 +59,6 @@ $next_order = ($order === 'ASC') ? 'desc' : 'asc';
         <p>Aucune question disponible.</p>
     <?php endif; ?>
 
-    <a href="add_question.php" class="btn btn-primary mt-3">Ajouter une nouvelle question</a>
+    <a href="views/add_question.php" class="btn btn-primary mt-3">Ajouter une nouvelle question</a>
 </body>
 </html>

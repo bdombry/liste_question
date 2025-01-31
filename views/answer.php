@@ -39,7 +39,7 @@ $taux_reussite = ($question['tentatives'] > 0) ? round(($question['reussites'] /
             <input type="text" class="form-control" id="reponse" name="reponse" required>
         </div>
         <button type="submit" class="btn btn-primary">Valider</button>
-        <a href="../views/list.php" class="btn btn-secondary mt-3">Retour à la liste</a>
+        <a href="../index.php" class="btn btn-secondary mt-3">Retour à la liste</a>
     </form>
 </body>
 </html>

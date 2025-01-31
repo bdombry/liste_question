@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="emoji">🎉</div>
                 <h2 class="mt-3">Bravo ! Bonne réponse !</h2>
                 <p class="mt-3"><?= htmlspecialchars($question['message_succes']) ?></p>
-                <a href="../views/list.php" class="btn btn-primary mt-3">Retour à la liste</a>
+                <a href="../index.php" class="btn btn-primary mt-3">Retour à la liste</a>
             </div>
             <?php
             $stmt = $pdo->prepare("UPDATE questions SET reussites = reussites + 1 WHERE id = :id");

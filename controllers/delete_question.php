@@ -12,7 +12,7 @@ try {
     $stmt = $pdo->prepare("DELETE FROM questions WHERE id = :id");
     $stmt->execute([':id' => $question_id]);
 
-    header("Location: ../views/list.php");
+    header("Location: ../index.php");
     exit();
 } catch (PDOException $e) {
     die("Erreur lors de la suppression : " . $e->getMessage());
